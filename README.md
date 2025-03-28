@@ -38,3 +38,42 @@
         - No proporciona una guía tan detallada y estructurada como el modelo OSI.
         - Puede ser menos flexible en términos de estandarización y desarrollo de nuevos protocolos.
 ---
+
+## Pregunta 2: Función de la Capa de Transporte
+
+### Explica el papel de la capa de transporte en ambos modelos (OSI y TCP/IP). En tu respuesta, menciona cómo se garantiza la entrega de datos y da ejemplos de protocolos asociados a esta capa.
+
+**Función de la Capa de Transporte**
+
+La capa de transporte es crucial tanto en el modelo OSI como en el modelo TCP/IP, ya que se encarga de proporcionar una transferencia de datos confiable y eficiente entre sistemas finales.
+
+**Modelo OSI**
+
+En el modelo OSI, la capa de transporte es la cuarta capa. Su función principal es garantizar que los datos se transfieran de manera confiable y sin errores entre los nodos de la red. Esto se logra mediante:
+
+- **Control de flujo:** Regula la cantidad de datos que se envían para evitar la congestión de la red.
+- **Control de errores:** Detecta y corrige errores que puedan ocurrir durante la transmisión de datos.
+- **Segmentación y reensamblaje:** Divide los datos en segmentos más pequeños para su transmisión y los reensambla en el destino.
+- **Establecimiento de conexión:** Establece, mantiene y termina conexiones lógicas entre los nodos.
+
+Ejemplos de protocolos en la capa de transporte del modelo OSI incluyen:
+
+- **TCP (Transmission Control Protocol):** Protocolo orientado a la conexión que garantiza la entrega confiable de datos.
+- **UDP (User Datagram Protocol):** Protocolo no orientado a la conexión que permite la transmisión rápida de datos sin garantía de entrega.
+
+**Modelo TCP/IP**
+
+En el modelo TCP/IP, la capa de transporte es la tercera capa. Sus funciones son similares a las del modelo OSI, enfocándose en la entrega confiable de datos entre aplicaciones. Las principales responsabilidades incluyen:
+
+- **Multiplexación:** Permite que múltiples aplicaciones utilicen la red simultáneamente.
+- **Control de flujo y errores:** Similar al modelo OSI, regula la transmisión de datos y corrige errores.
+- **Establecimiento de conexión:** Gestiona la creación y terminación de conexiones entre aplicaciones.
+
+Ejemplos de protocolos en la capa de transporte del modelo TCP/IP incluyen:
+
+- **TCP (Transmission Control Protocol):** Protocolo orientado a la conexión que asegura la entrega ordenada y confiable de datos.
+- **UDP (User Datagram Protocol):** Protocolo no orientado a la conexión que permite la transmisión rápida y sin garantía de entrega.
+
+En resumen, la capa de transporte en ambos modelos es esencial para garantizar la entrega confiable y eficiente de datos entre sistemas finales, utilizando protocolos como TCP y UDP para cumplir con sus funciones.
+
+---
