@@ -77,3 +77,38 @@ Ejemplos de protocolos en la capa de transporte del modelo TCP/IP incluyen:
 En resumen, la capa de transporte en ambos modelos es esencial para garantizar la entrega confiable y eficiente de datos entre sistemas finales, utilizando protocolos como TCP y UDP para cumplir con sus funciones.
 
 ---
+
+## Pregunta 3: TCP vs. UDP
+
+### Compara y contrasta TCP y UDP en términos de:
+
+#### Orientación a conexión
+
+- **TCP (Transmission Control Protocol):** Es un protocolo orientado a la conexión. Esto significa que antes de que los datos puedan ser transferidos, se debe establecer una conexión entre el emisor y el receptor mediante un proceso de "handshake" de tres vías.
+- **UDP (User Datagram Protocol):** Es un protocolo no orientado a la conexión. No requiere establecer una conexión antes de enviar datos, lo que permite una comunicación más rápida pero menos confiable.
+
+#### Fiabilidad y control de errores
+
+- **TCP:** Proporciona fiabilidad y control de errores. Utiliza técnicas como la retransmisión de paquetes perdidos, el control de flujo y el control de congestión para asegurar que los datos lleguen correctamente y en orden.
+- **UDP:** No proporciona fiabilidad ni control de errores. Los paquetes pueden perderse, duplicarse o llegar fuera de orden sin que el protocolo intente corregir estos problemas. Es responsabilidad de la aplicación manejar estos aspectos si es necesario.
+
+#### Velocidad y orden de entrega
+
+- **TCP:** Debido a su naturaleza orientada a la conexión y sus mecanismos de control de errores, TCP tiende a ser más lento que UDP. Sin embargo, garantiza que los datos lleguen en el orden correcto.
+- **UDP:** Es más rápido que TCP porque no tiene el overhead de establecer una conexión y no realiza control de errores. Sin embargo, no garantiza el orden de entrega de los datos.
+
+#### Ejemplos de aplicaciones en las que se emplea cada uno
+
+- **TCP:**
+    - **HTTP/HTTPS:** Utilizado para la navegación web.
+    - **FTP:** Protocolo de transferencia de archivos.
+    - **SMTP:** Protocolo para el envío de correos electrónicos.
+    - **SSH:** Protocolo para acceso remoto seguro.
+
+- **UDP:**
+    - **DNS:** Sistema de nombres de dominio.
+    - **VoIP:** Protocolo de voz sobre IP.
+    - **Streaming de video y audio:** Aplicaciones que requieren transmisión continua de datos.
+    - **TFTP:** Protocolo de transferencia de archivos trivial.
+
+En resumen, TCP y UDP son protocolos de transporte con diferentes características y usos. TCP es adecuado para aplicaciones que requieren fiabilidad y orden, mientras que UDP es ideal para aplicaciones que priorizan la velocidad y pueden tolerar la pérdida de datos.
