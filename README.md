@@ -1,3 +1,7 @@
+Link con acceso al respositorio --> https://github.com/GabriHR/Simulacro_Redes_1.git
+
+---
+
 ## Pregunta 1: Modelos OSI y TCP/IP
 
 ### a) Describe las principales diferencias entre el modelo OSI y el modelo TCP/IP, considerando aspectos como el número de capas, la orientación (teórica vs. práctica) y el manejo de la capa de aplicación.
