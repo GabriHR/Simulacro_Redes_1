@@ -293,6 +293,8 @@ $$C \approx 3.3291 \times 10^9 \text{ bps}$$
 Resultado final:
 La tasa de transmisión máxima ( C ) es aproximadamente 3.3291 Gbps.
 
+---
+
 ## Pregunta 8: Ubicación de Portadoras para Eficiencia Espectral
 
 Dado que en un sistema de comunicación la primera portadora se encuentra a 1.2 GHz y el ancho de banda en banda base de cada canal es de 300 MHz, determina lo siguiente:
@@ -343,6 +345,8 @@ Esto es especialmente importante en sistemas de comunicación donde el espectro 
 La correcta separación de las portadoras asegura que cada canal pueda transmitir datos sin interferencias significativas,
 mejorando así la calidad y la capacidad del sistema de comunicación.
 
+---
+
 ## Pregunta 9: Identificación de Modulación en Función del BER
 
 Se sabe que la robustez ante el ruido de una modulación depende del número de símbolos por baudio, de manera que:
@@ -382,3 +386,86 @@ Para ordenar las modulaciones de mayor a menor robustez ante el ruido, considera
 - 256-QAM: Tiene 256 símbolos, lo que ofrece la mayor eficiencia entre las modulaciones listadas, pero con la menor distancia entre los símbolos, lo que la hace la menos robusta ante el ruido.
 
 En resumen, a medida que se incrementa el número de símbolos en la modulación, la eficiencia espectral aumenta, pero la tolerancia al ruido disminuye, haciendo que modulaciones con más símbolos sean menos robustas ante el ruido.
+
+---
+
+## Pregunta 10: Eficiencia del Sistema de Encapsulamiento
+
+Considera un sistema de encapsulamiento con la siguiente configuración:
+
+- Capa 5: Envía un bloque de datos de 1.5 Kbytes (1 Kbyte = 1024 bytes).
+- Capas 4 y 3: Cada una añade una cabecera de 40 bytes.
+- Capa 2: Permite el envío de tramas de 400 bytes como máximo.
+- Capa 1: Por cada 2 bytes de datos, se añaden:
+    - 8 bits (1 byte) de inicio,
+    - 1 byte de parada,
+    - 8 bits (1 byte) de CRC.
+
+Realiza los siguientes cálculos:
+
+#### a) Tamaño del Mensaje
+
+- Para calcular el tamaño total del mensaje después de agregar las cabeceras de las capas 4 y 3:
+
+  1. Tamaño del bloque de datos original (Capa 5): 1.5 Kbytes = 1.5 \* 1024 bytes = 1536 bytes
+  2. Cabecera de la Capa 4: 40 bytes
+  3. Cabecera de la Capa 3: 40 bytes
+
+- Tamaño total del mensaje:
+
+$$\text{Tamaño total} = 1536 \text{ bytes} + 40 \text{ bytes} + 40 \text{ bytes} = 1616 \text{ bytes}$$
+
+#### b) Fragmentación en Tramas
+
+Para determinar el número de tramas de 400 bytes necesarias para transmitir el mensaje resultante:
+
+1. Tamaño máximo de trama (Capa 2): 400 bytes
+2. Tamaño total del mensaje: 1616 bytes
+
+- Número de tramas necesarias:
+
+$$\text{Número de tramas} = \left\lceil \frac{1616 \text{ bytes}}{400 \text{ bytes/trama}} \right\rceil = \left\lceil 4.04 \right\rceil = 5 \text{ tramas}$$
+
+#### c) Sobrecarga de la Capa 1
+
+- Para cada trama de 400 bytes, calculamos la cantidad de sobrecarga introducida por la capa 1:
+
+  1. Datos por trama: 400 bytes
+  2. Sobrecarga por cada 2 bytes de datos:
+      - 1 byte de inicio
+      - 1 byte de parada
+      - 1 byte de CRC
+
+- Número de segmentos de 2 bytes en una trama de 400 bytes:
+
+$$\text{Número de segmentos} = \frac{400 \text{ bytes}}{2 \text{ bytes/segmento}} = 200 \text{ segmentos}$$
+
+- Sobrecarga total por trama:
+
+$$\text{Sobrecarga por segmento} = 1 \text{ byte de inicio} + 1 \text{ byte de parada} + 1 \text{ byte de CRC} = 3 \text{ bytes}$$
+
+$$\text{Sobrecarga total por trama} = 200 \text{ segmentos} \times 3 \text{ bytes/segmento} = 600 \text{ bytes}$$
+
+#### d) Eficiencia del Sistema
+
+- Para calcular la eficiencia del sistema de encapsulamiento:
+
+  1. Datos útiles (bloque original): 1536 bytes
+  2. Total de datos transmitidos:
+      - Datos por trama: 400 bytes
+      - Sobrecarga por trama: 600 bytes
+      - Total por trama: 400 bytes + 600 bytes = 1000 bytes
+      - Total de datos transmitidos: 5 tramas \* 1000 bytes/trama = 5000 bytes
+
+- Eficiencia del sistema:
+
+$$\text{Eficiencia} = \left( \frac{\text{Datos útiles}}{\text{Total de datos transmitidos}} \right) \times 100$$
+
+$$\text{Eficiencia} = \left( \frac{1536 \text{ bytes}}{5000 \text{ bytes}} \right) \times 100 \approx 30.72\%$$
+
+### Resumen de Resultados
+
+- Tamaño del mensaje después de agregar las cabeceras de las capas 4 y 3: 1616 bytes
+- Número de tramas de 400 bytes necesarias: 5 tramas
+- Sobrecarga de la capa 1 por trama: 600 bytes
+- Eficiencia del sistema de encapsulamiento: 30.72%
