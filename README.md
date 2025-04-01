@@ -237,3 +237,58 @@ El proceso de recepción de datos es el inverso del proceso de envío:
 
     - Proceso: La capa de aplicación recibe el mensaje y lo entrega a la aplicación correspondiente (por ejemplo, el navegador web muestra la página web solicitada).
 En resumen, cada capa del modelo TCP/IP tiene un rol específico en el proceso de comunicación, desde la generación de datos por la aplicación hasta la transmisión física y la recepción de los datos en el dispositivo de destino.
+
+---
+
+# Parte II: Capa Física y Ejercicios Prácticos.
+
+## Pregunta 7: Cálculo de Tasa de Transmisión Máxima (Fórmula de Shannon)
+Utiliza la fórmula de Shannon:
+
+$$C = B \times \log_2(1 + SNR)$$
+
+donde:
+
+
+C es la tasa de transmisión máxima (bps),
+B es el ancho de banda (Hz),
+SNR es la relación señal a ruido en escala lineal recuerda que: $$SNR \text{ (lineal)} = 10^{\frac{SNR \text{ (dB)}}{10}}$$
+Enunciado: Calcula la tasa de transmisión máxima para un canal con las siguientes características:
+
+- Ancho de banda: 500 MHz
+- SNR: 20 dB
+
+Muestra el proceso de conversión del SNR a escala lineal y el cálculo final de ( C ).
+## Solución:
+Para calcular la tasa de transmisión máxima ( C ) utilizando la fórmula de Shannon, seguimos estos pasos:
+
+
+Convertir el SNR de dB a escala lineal: $$SNR_{\text{lineal}} = 10^{\frac{SNR_{\text{dB}}}{10}}$$
+
+
+Aplicar la fórmula de Shannon: $$C = B \times \log_2(1 + SNR_{\text{lineal}})$$
+
+
+Datos proporcionados:
+- Ancho de banda (( B )): $$500 MHz = 500 \times 10^6 Hz$$
+- SNR: 20 dB
+
+Paso 1: Convertir SNR de dB a escala lineal
+$$SNR_{\text{lineal}} = 10^{\frac{20}{10}} = 10^2 = 100$$
+
+
+Paso 2: Calcular la tasa de transmisión máxima ( C )
+$$C = 500 \times 10^6 \times \log_2(1 + 100)$$
+
+$$C = 500 \times 10^6 \times \log_2(101)$$
+
+Usando la aproximación: $$\log_2(101) \approx 6.6582$$
+
+Aplicamos la fórmula de Shannon:
+$$C = 500 \times 10^6 \times 6.6582$$
+
+$$C \approx 3.3291 \times 10^9 \text{ bps}$$
+
+
+Resultado final:
+La tasa de transmisión máxima ( C ) es aproximadamente 3.3291 Gbps.
