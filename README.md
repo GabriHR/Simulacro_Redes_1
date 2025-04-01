@@ -112,3 +112,26 @@ En resumen, la capa de transporte en ambos modelos es esencial para garantizar l
     - **TFTP:** Protocolo de transferencia de archivos trivial.
 
 En resumen, TCP y UDP son protocolos de transporte con diferentes características y usos. TCP es adecuado para aplicaciones que requieren fiabilidad y orden, mientras que UDP es ideal para aplicaciones que priorizan la velocidad y pueden tolerar la pérdida de datos.
+
+---
+
+## Pregunta 4: Protocolo para Transferencia de Archivos
+### a) ¿Qué protocolo de la capa de aplicación se utiliza tradicionalmente para la transferencia de archivos en redes TCP/IP?
+El protocolo tradicionalmente utilizado para la transferencia de archivos en redes TCP/IP es el FTP (File Transfer Protocol).
+
+### b) Menciona al menos dos alternativas a este protocolo, resaltando sus diferencias principales en cuanto a seguridad o funcionalidad.
+SFTP (SSH File Transfer Protocol):
+
+Seguridad: SFTP proporciona una transferencia de archivos segura utilizando el protocolo SSH (Secure Shell) para cifrar tanto los datos como las credenciales de usuario.
+Funcionalidad: Además de la transferencia de archivos, SFTP permite operaciones de gestión de archivos como la creación, eliminación y modificación de archivos y directorios en el servidor remoto.
+FTPS (FTP Secure):
+
+Seguridad: FTPS añade soporte para SSL/TLS (Secure Sockets Layer/Transport Layer Security) a FTP, proporcionando cifrado para la transferencia de datos y las credenciales de usuario.
+Funcionalidad: FTPS mantiene la misma funcionalidad que FTP, pero con la adición de seguridad mediante cifrado. Puede operar en modo explícito (requiere una conexión segura) o implícito (usa un puerto seguro predeterminado).
+En resumen, mientras que FTP es el protocolo tradicional para la transferencia de archivos, SFTP y FTPS ofrecen mejoras significativas en términos de seguridad mediante el uso de cifrado.
+
+---
+
+## Pregunta 5: Resolución de Nombres en DNS
+Describe detalladamente el proceso de resolución de nombres en DNS, desde que un usuario ingresa una URL en el navegador 
+hasta que se establece la conexión con el servidor web. Incluye en tu respuesta el rol de la caché y de los servidores raíz.
