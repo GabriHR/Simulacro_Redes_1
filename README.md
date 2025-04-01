@@ -342,3 +342,43 @@ entre canales adyacentes y maximizar el uso del espectro disponible.
 Esto es especialmente importante en sistemas de comunicación donde el espectro es un recurso limitado y costoso. 
 La correcta separación de las portadoras asegura que cada canal pueda transmitir datos sin interferencias significativas,
 mejorando así la calidad y la capacidad del sistema de comunicación.
+
+## Pregunta 9: Identificación de Modulación en Función del BER
+
+Se sabe que la robustez ante el ruido de una modulación depende del número de símbolos por baudio, de manera que:
+
+- BPSK (2-QAM) es la más robusta.
+- QPSK (4 símbolos) ofrece el doble de eficiencia que BPSK.
+- A medida que se incrementa el número de símbolos (16-QAM, 64-QAM, 256-QAM), la eficiencia aumenta pero la tolerancia al ruido disminuye.
+
+#### Enunciado:
+Ordena las siguientes modulaciones de mayor a menor robustez ante el ruido (para una misma SNR):
+
+- BPSK
+- QPSK
+- 16-QAM
+- 64-QAM
+- 256-QAM
+
+Justifica tu respuesta basándote en el número de símbolos y la sensibilidad al ruido.
+
+## Solución:
+Para ordenar las modulaciones de mayor a menor robustez ante el ruido, consideramos que la robustez ante el ruido disminuye a medida que aumenta el número de símbolos por baudio. Esto se debe a que, con más símbolos, la distancia entre ellos en el espacio de la constelación es menor, lo que hace que la modulación sea más sensible al ruido.
+
+#### Orden de mayor a menor robustez ante el ruido:
+
+1. BPSK (2-QAM)
+2. QPSK (4 símbolos)
+3. 16-QAM
+4. 64-QAM
+5. 256-QAM
+
+#### Justificación:
+
+- BPSK (2-QAM): Tiene solo 2 símbolos, lo que significa que la distancia entre los símbolos es máxima. Esto hace que BPSK sea la modulación más robusta ante el ruido.
+- QPSK (4 símbolos): Tiene 4 símbolos, lo que ofrece el doble de eficiencia que BPSK, pero con una menor distancia entre los símbolos, lo que la hace menos robusta ante el ruido en comparación con BPSK.
+- 16-QAM: Tiene 16 símbolos, lo que aumenta la eficiencia en comparación con QPSK, pero reduce aún más la distancia entre los símbolos, disminuyendo la robustez ante el ruido.
+- 64-QAM: Tiene 64 símbolos, lo que incrementa la eficiencia en comparación con 16-QAM, pero con una mayor reducción en la distancia entre los símbolos, haciendo que sea menos robusta ante el ruido.
+- 256-QAM: Tiene 256 símbolos, lo que ofrece la mayor eficiencia entre las modulaciones listadas, pero con la menor distancia entre los símbolos, lo que la hace la menos robusta ante el ruido.
+
+En resumen, a medida que se incrementa el número de símbolos en la modulación, la eficiencia espectral aumenta, pero la tolerancia al ruido disminuye, haciendo que modulaciones con más símbolos sean menos robustas ante el ruido.
