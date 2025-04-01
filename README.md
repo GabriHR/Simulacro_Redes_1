@@ -41,8 +41,9 @@
 
 ## Pregunta 2: Función de la Capa de Transporte
 
-### Explica el papel de la capa de transporte en ambos modelos (OSI y TCP/IP). En tu respuesta, menciona cómo se garantiza la entrega de datos y da ejemplos de protocolos asociados a esta capa.
+Explica el papel de la capa de transporte en ambos modelos (OSI y TCP/IP). En tu respuesta, menciona cómo se garantiza la entrega de datos y da ejemplos de protocolos asociados a esta capa.
 
+## Solución:
 **Función de la Capa de Transporte**
 
 La capa de transporte es crucial tanto en el modelo OSI como en el modelo TCP/IP, ya que se encarga de proporcionar una transferencia de datos confiable y eficiente entre sistemas finales.
@@ -117,9 +118,13 @@ En resumen, TCP y UDP son protocolos de transporte con diferentes característic
 
 ## Pregunta 4: Protocolo para Transferencia de Archivos
 ### a) ¿Qué protocolo de la capa de aplicación se utiliza tradicionalmente para la transferencia de archivos en redes TCP/IP?
+
+### Solución:
 El protocolo tradicionalmente utilizado para la transferencia de archivos en redes TCP/IP es el FTP (File Transfer Protocol).
 
 ### b) Menciona al menos dos alternativas a este protocolo, resaltando sus diferencias principales en cuanto a seguridad o funcionalidad.
+
+### Solución:
 SFTP (SSH File Transfer Protocol):
 
 Seguridad: SFTP proporciona una transferencia de archivos segura utilizando el protocolo SSH (Secure Shell) para cifrar tanto los datos como las credenciales de usuario.
@@ -135,3 +140,100 @@ En resumen, mientras que FTP es el protocolo tradicional para la transferencia d
 ## Pregunta 5: Resolución de Nombres en DNS
 Describe detalladamente el proceso de resolución de nombres en DNS, desde que un usuario ingresa una URL en el navegador 
 hasta que se establece la conexión con el servidor web. Incluye en tu respuesta el rol de la caché y de los servidores raíz.
+
+## Solución:
+
+El proceso de resolución de nombres en DNS (Domain Name System) es el mecanismo mediante el cual se traduce un nombre de dominio legible por humanos (como `www.ejemplo.com`) en una dirección IP (como `192.0.2.1`) que las computadoras utilizan para identificar y comunicarse con los servidores en la red. A continuación se describe detalladamente este proceso:
+
+1. **Ingreso de la URL:**
+    - El usuario ingresa una URL en el navegador web.
+
+2. **Consulta a la Caché del Navegador:**
+    - El navegador primero verifica si la dirección IP correspondiente al nombre de dominio ya está almacenada en su caché local. Si la encuentra, utiliza esa dirección IP para establecer la conexión.
+
+3. **Consulta a la Caché del Sistema Operativo:**
+    - Si la dirección IP no está en la caché del navegador, el sistema operativo verifica su propia caché DNS para ver si tiene la dirección IP correspondiente.
+
+4. **Consulta al Servidor DNS Recursivo:**
+    - Si la dirección IP no se encuentra en la caché del sistema operativo, se envía una consulta a un servidor DNS recursivo (generalmente proporcionado por el ISP o configurado manualmente).
+
+5. **Consulta a la Caché del Servidor DNS Recursivo:**
+    - El servidor DNS recursivo verifica su propia caché para ver si tiene la dirección IP correspondiente al nombre de dominio.
+
+6. **Consulta a los Servidores Raíz:**
+    - Si la dirección IP no está en la caché del servidor DNS recursivo, este envía una consulta a uno de los servidores raíz del DNS. Los servidores raíz no contienen la dirección IP del dominio, pero pueden dirigir la consulta a los servidores de dominio de nivel superior (TLD).
+
+7. **Consulta a los Servidores TLD:**
+    - Los servidores raíz responden con la dirección de los servidores TLD (por ejemplo, los servidores responsables de `.com`, `.org`, etc.). El servidor DNS recursivo entonces consulta a los servidores TLD correspondientes.
+
+8. **Consulta a los Servidores Autoritativos:**
+    - Los servidores TLD responden con la dirección de los servidores DNS autoritativos para el dominio específico (por ejemplo, `ejemplo.com`). El servidor DNS recursivo consulta a estos servidores autoritativos.
+
+9. **Respuesta del Servidor Autoritativo:**
+    - Los servidores autoritativos responden con la dirección IP correspondiente al nombre de dominio solicitado.
+
+10. **Almacenamiento en Caché:**
+    - El servidor DNS recursivo almacena la dirección IP en su caché para futuras consultas y la envía de vuelta al sistema operativo del usuario.
+
+11. **Establecimiento de la Conexión:**
+    - El sistema operativo pasa la dirección IP al navegador, que luego establece una conexión con el servidor web utilizando la dirección IP obtenida.
+
+12. **Carga del Sitio Web:**
+    - El navegador envía una solicitud HTTP al servidor web y comienza a cargar el sitio web solicitado.
+
+---
+
+## Pregunta 6: Comunicación en el Modelo TCP/IP
+Explica el proceso de comunicación entre dos dispositivos en una red utilizando el modelo TCP/IP. Describe el rol y la función de cada capa (Aplicación, Transporte, Internet y Acceso a Red) durante el envío y recepción de datos.
+
+## Solución:
+El proceso de comunicación entre dos dispositivos en una red utilizando el modelo TCP/IP implica varias capas, cada una con roles y funciones específicas. A continuación se describe el proceso de envío y recepción de datos a través de las capas del modelo TCP/IP:
+
+
+- Capa de Aplicación:
+
+
+    - Rol: Proporciona servicios de red a las aplicaciones del usuario.
+    - Función: Las aplicaciones generan datos que necesitan ser enviados a través de la red. Ejemplos de protocolos en esta capa incluyen HTTP, FTP, SMTP y DNS.
+    - Proceso: La aplicación (por ejemplo, un navegador web) crea un mensaje (por ejemplo, una solicitud HTTP) y lo pasa a la capa de transporte.
+- Capa de Transporte:
+
+
+    - Rol: Proporciona comunicación de extremo a extremo y control de flujo de datos.
+    - Función: Divide los datos en segmentos, asegura la entrega confiable (en el caso de TCP) y gestiona el control de errores y el reensamblaje de datos.
+    - Proceso: La capa de transporte (por ejemplo, utilizando TCP) encapsula el mensaje de la capa de aplicación en segmentos, añade encabezados con información de control (como números de puerto y secuencia) y lo pasa a la capa de Internet.
+- Capa de Internet:
+
+
+    - Rol: Encargada de la dirección y el encaminamiento de los paquetes a través de la red.
+    - Función: Encapsula los segmentos en paquetes, añade encabezados con direcciones IP de origen y destino, y determina la ruta que los paquetes deben seguir para llegar al destino.
+    - Proceso: La capa de Internet (utilizando el protocolo IP) encapsula los segmentos en paquetes IP, añade las direcciones IP y pasa los paquetes a la capa de acceso a red.
+- Capa de Acceso a Red:
+
+
+    - Rol: Maneja la transmisión física de los datos a través de la red.
+    - Función: Encapsula los paquetes IP en tramas, añade encabezados y trailers con direcciones MAC y otra información de control, y transmite las tramas a través del medio físico (cableado, inalámbrico, etc.).
+    - Proceso: La capa de acceso a red (utilizando protocolos como Ethernet o Wi-Fi) encapsula los paquetes en tramas, añade las direcciones MAC y transmite las tramas a través del medio físico hacia el dispositivo de destino.
+
+### Recepción de Datos
+
+El proceso de recepción de datos es el inverso del proceso de envío:
+
+
+- Capa de Acceso a Red:
+
+
+    - Proceso: El dispositivo receptor recibe las tramas a través del medio físico, verifica las direcciones MAC y pasa las tramas a la capa de Internet.
+- Capa de Internet:
+
+
+    - Proceso: La capa de Internet verifica las direcciones IP, desencapsula los paquetes IP y pasa los segmentos a la capa de transporte.
+- Capa de Transporte:
+
+
+    -Proceso: La capa de transporte verifica los números de puerto, reensambla los segmentos en el mensaje original, maneja el control de errores y pasa el mensaje a la capa de aplicación.
+- Capa de Aplicación:
+
+
+    - Proceso: La capa de aplicación recibe el mensaje y lo entrega a la aplicación correspondiente (por ejemplo, el navegador web muestra la página web solicitada).
+En resumen, cada capa del modelo TCP/IP tiene un rol específico en el proceso de comunicación, desde la generación de datos por la aplicación hasta la transmisión física y la recepción de los datos en el dispositivo de destino.
