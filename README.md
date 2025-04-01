@@ -325,7 +325,9 @@ f_{\text{posterior}} = f_{\text{primera}} + B
 $$
 
 Donde:
+
 $$f_{\text{primera}} = 1.2 \text{ GHz} = 1200 \text{ MHz}$$
+
 $$B = 300 \text{ MHz}$$
 
 $$
