@@ -231,7 +231,7 @@ El proceso de recepción de datos es el inverso del proceso de envío:
 - Capa de Transporte:
 
 
-    -Proceso: La capa de transporte verifica los números de puerto, reensambla los segmentos en el mensaje original, maneja el control de errores y pasa el mensaje a la capa de aplicación.
+    - Proceso: La capa de transporte verifica los números de puerto, reensambla los segmentos en el mensaje original, maneja el control de errores y pasa el mensaje a la capa de aplicación.
 - Capa de Aplicación:
 
 
