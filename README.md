@@ -292,3 +292,49 @@ $$C \approx 3.3291 \times 10^9 \text{ bps}$$
 
 Resultado final:
 La tasa de transmisión máxima ( C ) es aproximadamente 3.3291 Gbps.
+
+## Pregunta 8: Ubicación de Portadoras para Eficiencia Espectral
+
+Dado que en un sistema de comunicación la primera portadora se encuentra a 1.2 GHz y el ancho de banda en banda base de cada canal es de 300 MHz, determina lo siguiente:
+
+#### a) La frecuencia de la portadora anterior
+
+## Solución:
+Para encontrar la frecuencia de la portadora anterior, restamos el ancho de banda del canal a la frecuencia de la primera portadora:
+
+$$
+f_{\text{anterior}} = f_{\text{primera}} - B
+$$
+
+Donde:
+$$f_{\text{primera}} = 1.2 \text{ GHz} = 1200 \text{ MHz}$$
+$$B = 300 \text{ MHz}$$
+
+$$
+f_{\text{anterior}} = 1200 \text{ MHz} - 300 \text{ MHz} = 900 \text{ MHz}
+$$
+
+#### b) La frecuencia de la portadora posterior
+
+Para encontrar la frecuencia de la portadora posterior, sumamos el ancho de banda del canal a la frecuencia de la primera portadora:
+
+$$
+f_{\text{posterior}} = f_{\text{primera}} + B
+$$
+
+Donde:
+$$f_{\text{primera}} = 1.2 \text{ GHz} = 1200 \text{ MHz}$$
+$$B = 300 \text{ MHz}$$
+
+$$
+f_{\text{posterior}} = 1200 \text{ MHz} + 300 \text{ MHz} = 1500 \text{ MHz}
+$$
+
+- Importancia de la ubicación de las portadoras para la eficiencia espectral
+
+    - La ubicación de las portadoras es crucial para la eficiencia espectral porque determina cómo se distribuyen las señales en el espectro de frecuencias. 
+Una buena ubicación de las portadoras puede minimizar la interferencia 
+entre canales adyacentes y maximizar el uso del espectro disponible. 
+Esto es especialmente importante en sistemas de comunicación donde el espectro es un recurso limitado y costoso. 
+La correcta separación de las portadoras asegura que cada canal pueda transmitir datos sin interferencias significativas,
+mejorando así la calidad y la capacidad del sistema de comunicación.
